@@ -1,3 +1,8 @@
+/*
+ * Library for basic LED control.
+ */
+#include <Arduino.h>
+
 #include "led.h"
 
 // LED blink durations.
@@ -10,8 +15,17 @@
  *
  * @arg {int} pin - Output pin.
  */
-LED::LED(int pin) {
+LED::LED(int pin) : LED(pin, false) {}
+
+/**
+ * Constructor.
+ *
+ * @arg {int} pin - Output pin.
+ * @arg {bool} invert - Reverse on/off and dimming behaviour.
+ */
+LED::LED(int pin, bool invert) {
   _pin = pin;
+  _invert = invert;
 
   pinMode(_pin, OUTPUT);
   off();
@@ -21,14 +35,14 @@ LED::LED(int pin) {
  * Turn the LED on.
  */
 void LED::on(void) {
-  digitalWrite(_pin, HIGH);
+  digitalWrite(_pin, HIGH ^ _invert);
 }
 
 /**
  * Turn the LED off.
  */
 void LED::off(void) {
-  digitalWrite(_pin, LOW);
+  digitalWrite(_pin, LOW ^ _invert);
 }
 
 /**
@@ -39,6 +53,10 @@ void LED::off(void) {
  * @arg {int} brightness - Brightness.
  */
 void LED::setBrightness(byte brightness) {
+  if (_invert) {
+    analogWrite(_pin, 0xff - brightness);
+    return;
+  }
   analogWrite(_pin, brightness);
 }
 
