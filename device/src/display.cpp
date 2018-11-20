@@ -1,6 +1,8 @@
 /*
  * Library for a 7-segment display using MC74HC595AD shift registers.
  */
+#include <Arduino.h>
+
 #include "display.h"
 
 #define _BLANK 0xff // Empty.
