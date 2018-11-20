@@ -21,7 +21,7 @@ class Display {
          _dataPin,
          _latchPin;
     unsigned long _delay,
-                  _last_time;
+                  _lastRefresh;
     void _setSegment(byte, byte);
 };
 

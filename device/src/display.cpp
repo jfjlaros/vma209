@@ -1,10 +1,13 @@
+/*
+ * Library for a 7-segment display using MC74HC595AD shift registers.
+ */
 #include "display.h"
 
 #define _BLANK 0xff // Empty.
 #define _DOT 0x7f   // Decimal point.
 #define _MINUS 0xbf // Minus sign.
 
-unsigned char _digit[] = { // Digits 0-9.
+const unsigned char _digit[] = { // Digits 0-9.
   0xc0, 0xf9, 0xa4, 0xb0, 0x99, 0x92, 0x82, 0xf8, 0x80, 0x90};
 
 
@@ -21,7 +24,7 @@ Display::Display(byte clockPin, byte dataPin, byte latchPin) {
   _latchPin = latchPin;
 
   _delay = 0;
-  _last_time = 0;
+  _lastRefresh = 0;
 
   pinMode(_clockPin, OUTPUT);
   pinMode(_dataPin, OUTPUT);
@@ -104,7 +107,7 @@ void Display::displayInt(int value) {
 void Display::refresh(void) {
   byte i;
 
-  if (millis() - _last_time < _delay) {
+  if (millis() - _lastRefresh < _delay) {
     return;
   }
 
@@ -113,5 +116,5 @@ void Display::refresh(void) {
   }
   _setSegment(0x00, _BLANK); // TODO: Check the 0x00 effect.
 
-  _last_time = millis();
+  _lastRefresh = millis();
 }
