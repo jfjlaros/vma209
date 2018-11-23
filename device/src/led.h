@@ -5,16 +5,16 @@
 class LED {
   public:
     LED(void) {};
-    LED(int);
-    LED(int, bool);
+    LED(byte);
+    LED(byte, bool);
     void on(void),
          off(void),
          setBrightness(byte),
          pulse(int, int),
          signal(byte);
   private:
+    byte _pin;
     bool _invert;
-    int _pin;
 };
 
 #endif

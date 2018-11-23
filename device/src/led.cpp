@@ -13,17 +13,17 @@
 /**
  * Constructor.
  *
- * @arg {int} pin - Output pin.
+ * @arg {byte} pin - Output pin.
  */
-LED::LED(int pin) : LED(pin, false) {}
+LED::LED(byte pin) : LED(pin, false) {}
 
 /**
  * Constructor.
  *
- * @arg {int} pin - Output pin.
+ * @arg {byte} pin - Output pin.
  * @arg {bool} invert - Reverse on/off and dimming behaviour.
  */
-LED::LED(int pin, bool invert) {
+LED::LED(byte pin, bool invert) {
   _pin = pin;
   _invert = invert;
 
@@ -50,7 +50,7 @@ void LED::off(void) {
  *
  * Note that this only works for analogue output pins.
  *
- * @arg {int} brightness - Brightness.
+ * @arg {byte} brightness - Brightness.
  */
 void LED::setBrightness(byte brightness) {
   if (_invert) {
