@@ -1,12 +1,10 @@
 #ifndef __BUZZER_H__
 #define __BUZZER_H__
 
-
 class Buzzer {
   public:
     Buzzer(void) {};
-    Buzzer(byte);
-    Buzzer(byte, bool);
+    Buzzer(byte, bool=false);
     void tone(unsigned long),
          off(void);
   private:

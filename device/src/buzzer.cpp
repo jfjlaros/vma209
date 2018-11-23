@@ -3,8 +3,6 @@
 #include "buzzer.h"
 
 
-Buzzer::Buzzer(byte pin) : Buzzer(pin, false) {}
-
 Buzzer::Buzzer(byte pin, bool invert) {
   _pin = pin;
   _invert = invert;
