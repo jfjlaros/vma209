@@ -116,7 +116,7 @@ void Display::refresh(void) {
   for (i = 0; i < _SEGMENTS; i++) {
     _setSegment(i, _data[i]);
   }
-  _setSegment(0x00, _BLANK); // TODO: Check the 0x00 effect.
+  _setSegment(0x00, _BLANK);
 
   _lastRefresh = millis();
 }
