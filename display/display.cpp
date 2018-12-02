@@ -47,7 +47,7 @@ void Display::_setSegment(byte segment, byte data) {
 }
 
 /**
- * Blank the display.
+ * Clear the display.
  */
 void Display::blank(void) {
   int i;
