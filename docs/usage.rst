@@ -27,7 +27,7 @@ Display
 
    * - function
      - description
-   * - ``blank``
+   * - ``clear``
      - Clear the display.
    * - ``delay``
      - Set the refresh delay time.

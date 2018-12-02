@@ -30,7 +30,7 @@ Display::Display(byte clockPin, byte dataPin, byte latchPin) {
   pinMode(_dataPin, OUTPUT);
   pinMode(_latchPin, OUTPUT);
 
-  blank();
+  clear();
 }
 
 /**
@@ -49,7 +49,7 @@ void Display::_setSegment(byte segment, byte data) {
 /**
  * Clear the display.
  */
-void Display::blank(void) {
+void Display::clear(void) {
   int i;
 
   for (i = 0; i < _SEGMENTS; i++) {
@@ -87,7 +87,7 @@ void Display::displayInt(int value) {
   int value_ = value,
       i;
 
-  blank();
+  clear();
   if (value == 0) {
     _data[_SEGMENTS - 1] = _digit[0];
   }

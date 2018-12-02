@@ -10,7 +10,7 @@ class Display {
   public:
     Display(void) {};
     Display(byte, byte, byte);
-    void blank(void),
+    void clear(void),
          delay(byte),
          displayFloat(float),
          displayInt(int),

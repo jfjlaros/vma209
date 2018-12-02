@@ -44,8 +44,8 @@ void loop(void) {
     pack(&display, &Display::delay),
       "display_delay: Set the refresh delay time."
       "@delay: Delay time in milliseconds.",
-    pack(&display, &Display::blank),
-      "display_blank: Turn the display off.",
+    pack(&display, &Display::clear),
+      "display_clear: Turn the display off.",
     pack(&display, &Display::displayInt),
       "display_int: Display an integer value."
       "@value: Value.",

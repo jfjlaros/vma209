@@ -20,7 +20,7 @@ for i in range(26):
     interface.display_delay(i)
     sleep(0.05)
 
-interface.display_blank()
+interface.display_clear()
 
 for i in range(4):
     for j in range(255):
