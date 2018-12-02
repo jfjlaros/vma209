@@ -1,6 +1,8 @@
 #ifndef __DISPLAY_H__
 #define __DISPLAY_H__
 
+#include <Arduino.h>
+
 #define _SEGMENTS 4
 
 

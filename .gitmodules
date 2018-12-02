@@ -1,0 +1,6 @@
+[submodule "device/lib/simpleRPC"]
+	path = device/lib/simpleRPC
+	url = https://github.com/jfjlaros/simpleRPC.git
+[submodule "device/lib/arduino-peripherals"]
+	path = device/lib/arduino-peripherals
+	url = https://github.com/jfjlaros/arduino-peripherals.git
