@@ -69,5 +69,24 @@ integers.
     display.delay(20);        // Dim the display.
     display.displayInt(-123); // Show the string "-123".
 
+Demo
+^^^^
+
+A demo_ is provided to show the full functionality of the display and other
+peripherals. This demo is written in Python 3.
+
+First make sure all dependencies are installed.
+
+::
+
+    pip install -r requirements.txt
+
+Run the demo as follows.
+
+::
+
+    python demo.py
+
 
 .. _arduino-peripherals: https://arduino-peripherals.readthedocs.io
+.. _demo: https://github.com/jfjlaros/vma209/tree/master/example/host
