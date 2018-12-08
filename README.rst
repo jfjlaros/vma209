@@ -20,10 +20,13 @@ VMA209 shield expansion
 
 ----
 
-This library provides ...
+This library provides interfaces for the display and all other peripherals
+present on the Velleman VMA209_ "Multi-function shield expansion board for
+Arduino". By providing this library, we aim to augment the documentation and
+examples provided by the manufacturer.
 
 Please see ReadTheDocs_ for the latest documentation.
 
 
-.. _Arduino: https://www.arduino.cc
+.. _VMA209: https://www.vellemanusa.com/products/view/?id=529565
 .. _ReadTheDocs: https://vma209.readthedocs.io/en/latest/index.html
