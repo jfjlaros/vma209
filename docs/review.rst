@@ -118,8 +118,8 @@ Buttons
 -------
 
 Work fine, but like most of the other components are wired a bit awkward. They
-read a logical 0 if the button is pressed, a 1 otherwise. This is also
-mitigated by the use of the ``invert`` parameter.
+read LOW if the button is pressed, HIGH otherwise. This is also mitigated by
+the use of the ``invert`` parameter.
 
 Jumper J2 controls the pull up resistors for the buttons. If this jumper is
 removed, the ``pullUp`` parameter can be used to use the internal pull up
